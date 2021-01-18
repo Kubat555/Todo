@@ -1,10 +1,12 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="{%static 'styles/styles.css'%}">
 </head>
 <body>
     <section>
@@ -17,11 +19,11 @@
         <div class="todo_conteiner">
             <div class="todo_item">
                 <div class="todo_header">
-                    <img class="checkbox" id="checkbox" src="./img/1. Enabled.svg" alt="checkbox">
+                    <img class="checkbox" id="checkbox" src="{% static '' %}" alt="checkbox">
 
                     <div class="imgs">
-                        <img src="./img/delete.svg" alt="delete">
-                        <img src="./img/star_border_24px.svg" alt="star">
+                        <img src="../static/img/delete.svg" alt="delete">
+                        <img src="../static/img/star_border_24px.svg" alt="star">
                     </div>
                 </div>
                 <div class="todo_footer">
