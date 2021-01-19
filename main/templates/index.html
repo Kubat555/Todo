@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,22 +13,27 @@
             <input type="text" class="create_input"
                 placeholder="Напиши здесь что нибудь"            
             >
-            <button class="create_button" id="btn">ДОБАВИТЬ</button>
+            <button class="create_button">ДОБАВИТЬ</button>
         </div>
         <div class="todo_conteiner">
             <div class="todo_item">
                 <div class="todo_header">
-                    <img class="checkbox" id="checkbox" src="../static/img/" alt="checkbox">
+                    <img class="checkbox" id="checkbox" src="./img/1. Enabled.svg" alt="checkbox">
+
                     <div class="imgs">
-                        <img id="delete" src="../static/img/delete.svg" alt="delete">
-                        <img src="../static/img/star_border_24px.svg" alt="star">
+                        <img src="./img/delete.svg" alt="delete">
+                        <img src="./img/star_border_24px.svg" alt="star">
                     </div>
                 </div>
                 <div class="todo_footer">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sint quidem deleniti alias? Porro rem fugit animi nesciunt unde. At assumenda expedita recusandae magni enim, dolorem porro adipisci dolorum error.
-                    </p>
-                    <!-- <p class="todo__datetime"> 12.12.2020 20:28 </p> -->
+                    <div class="todo_contenttext">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sint quidem deleniti alias? Porro rem fugit animi nesciunt unde. At assumenda expedita recusandae magni enim, dolorem porro adipisci dolorum error.
+                        </p>
+                    </div>
+                    <div class="todo_time">
+                        <p>12.12.2020 20:28</p>
+                    </div>
                 </div>
             </div>
             <div class="todo_item marked">
@@ -42,9 +46,14 @@
                     </div>
                 </div>
                 <div class="todo_footer">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sint quidem deleniti alias? Porro rem fugit animi nesciunt unde. At assumenda expedita recusandae magni enim, dolorem porro adipisci dolorum error.
-                    </p>
+                    <div class="todo_contenttext">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sint quidem deleniti alias? Porro rem fugit animi nesciunt unde. At assumenda expedita recusandae magni enim, dolorem porro adipisci dolorum error.
+                        </p>
+                    </div>
+                    <div class="todo_time">
+                        <p>12.12.2020 20:28</p>
+                    </div>
                 </div>
             </div>
             <div class="todo_item done">
@@ -57,9 +66,14 @@
                     </div>
                 </div>
                 <div class="todo_footer">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sint quidem deleniti alias? Porro rem fugit animi nesciunt unde. At assumenda expedita recusandae magni enim, dolorem porro adipisci dolorum error.
-                    </p>
+                    <div class="todo_contenttext">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sint quidem deleniti alias? Porro rem fugit animi nesciunt unde. At assumenda expedita recusandae magni enim, dolorem porro adipisci dolorum error.
+                        </p>
+                    </div>
+                    <div class="todo_time">
+                        <p>12.12.2020 20:28</p>
+                    </div>
                 </div>
             </div>
             <div class="todo_item">
@@ -72,9 +86,14 @@
                     </div>
                 </div>
                 <div class="todo_footer">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sint quidem deleniti alias? Porro rem fugit animi nesciunt unde. At assumenda expedita recusandae magni enim, dolorem porro adipisci dolorum error.
-                    </p>
+                    <div class="todo_contenttext">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sint quidem deleniti alias? Porro rem fugit animi nesciunt unde. At assumenda expedita recusandae magni enim, dolorem porro adipisci dolorum error.
+                        </p>
+                    </div>
+                    <div class="todo_time">
+                        <p>12.12.2020 20:28</p>
+                    </div>
                 </div>
             </div>
             <div class="todo_item marked">
@@ -87,9 +106,14 @@
                     </div>
                 </div>
                 <div class="todo_footer">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sint quidem deleniti alias? Porro rem fugit animi nesciunt unde. At assumenda expedita recusandae magni enim, dolorem porro adipisci dolorum error.
-                    </p>
+                    <div class="todo_contenttext">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sint quidem deleniti alias? Porro rem fugit animi nesciunt unde. At assumenda expedita recusandae magni enim, dolorem porro adipisci dolorum error.
+                        </p>
+                    </div>
+                    <div class="todo_time">
+                        <p>12.12.2020 20:28</p>
+                    </div>
                 </div>
             </div>
             <div class="todo_item done">
@@ -102,14 +126,18 @@
                     </div>
                 </div>
                 <div class="todo_footer">
-                    <p>
-                        Lorem ipsum dolor sit amet 
-                    </p>
+                    <div class="todo_contenttext">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        </p>
+                    </div>
+                    <div class="todo_time">
+                        <p>12.12.2020 20:28</p>
+                    </div>
                 </div>
             </div>
         </div>
  
     </section>
-    <script src="../static/js/scripts.js"></script>
 </body>
 </html>
