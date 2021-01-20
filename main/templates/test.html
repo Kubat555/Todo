@@ -16,6 +16,7 @@
             <button class="create_button">ДОБАВИТЬ</button>
         </div>
         <div class="todo_conteiner">
+            {% for todo in todo_list %}
             <div class="todo_item">
                 <div class="todo_header">
                     <img class="checkbox" id="checkbox" src="./img/1. Enabled.svg" alt="checkbox">
@@ -27,115 +28,14 @@
                 </div>
                 <div class="todo_footer">
                     <div class="todo_contenttext">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sint quidem deleniti alias? Porro rem fugit animi nesciunt unde. At assumenda expedita recusandae magni enim, dolorem porro adipisci dolorum error.
-                        </p>
+                        <p>{{ todo.text }}</p>
                     </div>
                     <div class="todo_time">
-                        <p>12.12.2020 20:28</p>
+                        <p>{{ todo.create_at }}</p>
                     </div>
                 </div>
             </div>
-            <div class="todo_item marked">
-                <div class="todo_header">
-                    <img class="checkbox" id="checkbox" src="./img/1. Enabled.svg" alt="checkbox">
-
-                    <div class="imgs">
-                        <img src="./img/delete.svg" alt="delete">
-                        <img src="./img/starfull_24px.svg" alt="star">
-                    </div>
-                </div>
-                <div class="todo_footer">
-                    <div class="todo_contenttext">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sint quidem deleniti alias? Porro rem fugit animi nesciunt unde. At assumenda expedita recusandae magni enim, dolorem porro adipisci dolorum error.
-                        </p>
-                    </div>
-                    <div class="todo_time">
-                        <p>12.12.2020 20:28</p>
-                    </div>
-                </div>
-            </div>
-            <div class="todo_item done">
-                <div class="todo_header">
-                    <img class="checkbox" id="checkbox" src="./img/Object.svg" alt="checkbox">
-
-                    <div class="imgs">
-                        <img src="./img/delete.svg" alt="delete">
-                        <img src="./img/starfull_24px.svg" alt="star">
-                    </div>
-                </div>
-                <div class="todo_footer">
-                    <div class="todo_contenttext">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sint quidem deleniti alias? Porro rem fugit animi nesciunt unde. At assumenda expedita recusandae magni enim, dolorem porro adipisci dolorum error.
-                        </p>
-                    </div>
-                    <div class="todo_time">
-                        <p>12.12.2020 20:28</p>
-                    </div>
-                </div>
-            </div>
-            <div class="todo_item">
-                <div class="todo_header">
-                    <img class="checkbox" id="checkbox" src="./img/1. Enabled.svg" alt="checkbox">
-
-                    <div class="imgs">
-                        <img src="./img/delete.svg" alt="delete">
-                        <img src="./img/star_border_24px.svg" alt="star">
-                    </div>
-                </div>
-                <div class="todo_footer">
-                    <div class="todo_contenttext">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sint quidem deleniti alias? Porro rem fugit animi nesciunt unde. At assumenda expedita recusandae magni enim, dolorem porro adipisci dolorum error.
-                        </p>
-                    </div>
-                    <div class="todo_time">
-                        <p>12.12.2020 20:28</p>
-                    </div>
-                </div>
-            </div>
-            <div class="todo_item marked">
-                <div class="todo_header">
-                    <img class="checkbox" id="checkbox" src="./img/1. Enabled.svg" alt="checkbox">
-
-                    <div class="imgs">
-                        <img src="./img/delete.svg" alt="delete">
-                        <img src="./img/starfull_24px.svg" alt="star">
-                    </div>
-                </div>
-                <div class="todo_footer">
-                    <div class="todo_contenttext">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sint quidem deleniti alias? Porro rem fugit animi nesciunt unde. At assumenda expedita recusandae magni enim, dolorem porro adipisci dolorum error.
-                        </p>
-                    </div>
-                    <div class="todo_time">
-                        <p>12.12.2020 20:28</p>
-                    </div>
-                </div>
-            </div>
-            <div class="todo_item done">
-                <div class="todo_header">
-                    <img class="checkbox" id="checkbox" src="./img/Object.svg" alt="checkbox">
-
-                    <div class="imgs">
-                        <img src="./img/delete.svg" alt="delete">
-                        <img src="./img/star_border_24px.svg" alt="star">
-                    </div>
-                </div>
-                <div class="todo_footer">
-                    <div class="todo_contenttext">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        </p>
-                    </div>
-                    <div class="todo_time">
-                        <p>12.12.2020 20:28</p>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </section>
 </body>
