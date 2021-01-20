@@ -1,8 +1,8 @@
 from django.shortcuts import render, HttpResponse
-from .models import ToDo
+from .models import ToDo, Books
 
 def homepage(request):
-     return render(request, "index.html")
+    return render(request, "index.html")
 
 
 def test(request):
@@ -10,7 +10,8 @@ def test(request):
     return render(request, 'test.html', {"todo_list": todo_list})
 
 def second(request):
-    return HttpResponse("Test 2")
+    book = Books.objects.all()
+    return render(request, 'books.html', {"book": book})
 
 def third(request):
     return HttpResponse("This is page test3")

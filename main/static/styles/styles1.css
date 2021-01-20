@@ -77,7 +77,7 @@ button:focus {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 11px;
 }
-.todo_item span, .todo_item p{
+.todo_item span, .todo_item p, .todo_item h3{
     color:#FFFFFF;
 }
 .todo_header{
@@ -109,8 +109,10 @@ button:focus {
 .todo_item.done img{
     opacity: 0.5;
 }
-
 .todo_contenttext h3, p{
     margin-bottom: 15px;
+}
+.todo_time{
+    font-style: italic;
 }
 
