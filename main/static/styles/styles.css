@@ -8,7 +8,9 @@
 body{
     background: #121212;
 }
-
+a{
+    text-decoration: none;
+}
 section{
     width:100%;
     padding: 20px;
@@ -112,6 +114,7 @@ button:focus {
 }
 
 .todotext{
+    margin-top: 10px;
     margin-bottom: 15px;
     font-family: 'Open Sans', sans-serif;
 }
