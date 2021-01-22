@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 *{
     box-sizing: border-box;
     margin:0;
@@ -110,7 +111,10 @@ button:focus {
     opacity: 0.5;
 }
 
-.todo_contenttext h3, p{
+.todotext{
     margin-bottom: 15px;
+    font-family: 'Open Sans', sans-serif;
 }
-
+.todo_time{
+    font-style: italic;
+}
