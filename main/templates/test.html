@@ -19,11 +19,11 @@
             {% for todo in todo_list %}
             <div class="todo_item">
                 <div class="todo_header">
-                    <img class="checkbox" id="checkbox" src="./img/1. Enabled.svg" alt="checkbox">
+                    <img class="checkbox" id="checkbox" src="{%static 'img/1. Enabled.svg'%}" alt="checkbox">
 
                     <div class="imgs">
-                        <img src="./img/delete.svg" alt="delete">
-                        <img src="./img/star_border_24px.svg" alt="star">
+                        <img src="{%static 'img/delete.svg'%}" alt="delete">
+                        <img src="{%static 'img/star_border_24px.svg'%}" alt="star">
                     </div>
                 </div>
                 <div class="todo_footer">
