@@ -42,3 +42,10 @@ def done_todo(request, id):
     todo.is_done = True
     todo.save()
     return redirect(test)
+
+def undone_todo(request, id):
+    todo = ToDo.objects.get(id=id)
+    todo.is_done = False
+    todo.save()
+    return redirect(test)
+

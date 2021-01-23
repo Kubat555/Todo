@@ -28,7 +28,7 @@
             ">
                 <div class="todo_header">
                     {%  if todo.is_done %}
-                        <a href="{% url 'done-todo' todo.id %}">
+                        <a href="{% url 'undone-todo' todo.id %}">
                             <img class="checkbox" src="{%static 'img/Object.svg'%}" alt="checkbox">
                         </a>
                     {% else %}
