@@ -22,10 +22,20 @@
                 {% if todo.is_favorite %}
                     marked
                 {% endif %}
+                {% if todo.is_done %}
+                    done
+                {% endif %}
             ">
                 <div class="todo_header">
-                    <img class="checkbox" id="checkbox" src="{%static 'img/1. Enabled.svg'%}" alt="checkbox">
-
+                    {%  if todo.is_done %}
+                        <a href="{% url 'done-todo' todo.id %}">
+                            <img class="checkbox" src="{%static 'img/Object.svg'%}" alt="checkbox">
+                        </a>
+                    {% else %}
+                        <a href="{% url 'done-todo' todo.id %}">
+                            <img class="checkbox" src="{%static 'img/1. Enabled.svg'%}" alt="checkbox">
+                        </a>
+                    {% endif %}
                     <div class="imgs">
                         <a href="{% url 'delete-todo' todo.id %}">
                             <img src="{%static 'img/delete.svg'%}" alt="delet">
