@@ -31,7 +31,7 @@
                             <img src="{%static 'img/delete.svg'%}" alt="delet">
                         </a>
                         {% if todo.is_favorite %}
-                            <a href="{% url 'mark-todo' todo.id %}">
+                            <a href="{% url 'unmark-todo' todo.id %}">
                                 <img src="{%static 'img/starfull_24px.svg'%}" alt="star">
                             </a>
                         {% else %}
