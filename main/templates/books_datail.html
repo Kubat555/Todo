@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>books</title>
+    <link rel="stylesheet" href="{%static 'styles/styles1.css'%}">
+</head>
+<body>
+    <section>
+        <div class="todo_conteiner">
+            {% for books in book%}
+            <div class="todo_item
+                {% if books.is_favorite %}
+                    marked
+                {% endif %}
+            ">
+                <div class="todo_footer">
+                    <div class="todo_contenttext">
+                        <h3>{{ books.title }}</h3>
+                        <p>{{ books.author }}</p>
+                        <p>{{ books.description }}</p>
+
+                    </div>
+                    <div class="todo_time">
+                        <p>{{ books.date }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</body>
+</html>

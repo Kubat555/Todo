@@ -17,18 +17,30 @@
         </div>
         <div class="todo_conteiner">
             {% for books in book %}
-            <div class="todo_item">
+            <div class="todo_item
+                {% if books.is_favorite %}
+                    marked
+                {% endif %}
+            ">
                 <div class="todo_header">
-                    <img class="checkbox" id="checkbox" src="./img/1. Enabled.svg" alt="checkbox">
-
                     <div class="imgs">
-                        <img src="./img/delete.svg" alt="delete">
-                        <img src="./img/star_border_24px.svg" alt="star">
+                        <a href="{% url 'delete-books' books.id %}">
+                            <img src="{%static 'img/delete.svg'%}" alt="delet">
+                        </a>
+                        {% if books.is_favorite %}
+                            <a href="{% url 'unmark-books' books.id %}">
+                                <img src="{%static 'img/starfull_24px.svg'%}" alt="star">
+                            </a>
+                        {% else %}
+                            <a href="{% url 'mark-books' books.id %}">
+                                <img src="{%static 'img/star_border_24px.svg'%}" alt="star">
+                            </a>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="todo_footer">
                     <div class="todo_contenttext">
-                        <h3>{{ books.title }}</h3>
+                        <a href="{% url 'books-datail' books.id %}"><h3>{{ books.title }}</h3></a>
                         <p>{{ books.author }}</p>
                         <p>{{ books.description }}</p>
                     </div>

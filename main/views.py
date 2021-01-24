@@ -49,3 +49,26 @@ def undone_todo(request, id):
     todo.save()
     return redirect(test)
 
+# books function
+
+def delete_books(request, id):
+    books = Books.objects.get(id = id)
+    books.delete()
+    return redirect(second)
+
+def mark_books(request, id):
+    books = Books.objects.get(id = id)
+    books.is_favorite = True
+    books.save()
+    return redirect(second)
+
+def unmark_books(request, id):
+    books = Books.objects.get(id = id)
+    books.is_favorite = False
+    books.save()
+    return redirect(second)
+
+
+def books_datail(request, id):
+    booksinfo = Books.objects.get(id = id)
+    return render(request, "books_datail.html", {"booksinfo":booksinfo})
