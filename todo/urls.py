@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", homepage, name="home"),
+    path("", test, name="home"),
     path("test/", test, name="test"),
     path("add-todo/", add_todo, name="add-todo"),
     path("delete-todo/<id>/", delete_todo, name="delete-todo"),
@@ -34,6 +34,6 @@ urlpatterns = [
     path("delete-books/<id>/", delete_books, name="delete-books"),
     path("mark-books/<id>/", mark_books, name="mark-books"),
     path("unmark-books/<id>/", unmark_books, name="unmark-books"),
-    path("books-datail/<id>/", books_datail, name="books-datail"),
+    path("books/<int:pk>", booksinfo.as_view(), name="books-datail"),
 ]   + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT) \
     + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

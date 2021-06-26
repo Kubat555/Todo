@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from .models import ToDo, Books
+from django.views.generic import DetailView
 
 def homepage(request):
     return render(request, "index.html")
@@ -69,6 +70,7 @@ def unmark_books(request, id):
     return redirect(second)
 
 
-def books_datail(request, id):
-    booksinfo = Books.objects.get(id = id)
-    return render(request, "books_datail.html", {"booksinfo":booksinfo})
+class booksinfo(DetailView):
+    model = Books
+    tamplate_name ='books_datail.html'
+    context_object_name = 'info'
